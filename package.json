@@ -1,0 +1,17 @@
+{
+    "name": "webpack-example",
+    "version": "1.0.0",
+    "description": "a walk through implementation of webpack's official Getting Started guide",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack",
+        "server": "node src/server/index.js"
+    },
+    "dependencies": {
+        "express": "^4.16.3",
+        "lodash": "^4.17.10",
+        "webpack": "^4.17.1",
+        "webpack-cli": "^3.1.0"
+    }
+}
