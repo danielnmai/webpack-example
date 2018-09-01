@@ -9,7 +9,7 @@ function component(){
     let button = document.createElement('button')
 
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'Daniel'], ' ');
     element.classList.add('hello')
 
     // //Add the image
@@ -27,3 +27,14 @@ function component(){
 }
 
 document.body.appendChild(component())
+let element = component()
+
+if (module.hot) {
+    module.hot.accept('./print.js', function () {
+        console.log('Accepting the updated printMe module!')
+        document.body.removeChild(element)
+        element = component() // re-render the "component" to update the click handler
+        document.body.appendChild(element)
+
+    })
+}
